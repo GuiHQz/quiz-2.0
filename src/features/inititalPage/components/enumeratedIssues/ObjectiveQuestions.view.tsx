@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EnumeratedQuestionsView: React.FC = () => {
+export const ObjectiveQuestionsView: React.FC = () => {
     return(
         <div></div>
     )
