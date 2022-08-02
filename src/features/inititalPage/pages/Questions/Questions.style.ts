@@ -13,12 +13,13 @@ export const useStyles = makeStyles({
         fontWeight: 500,
     },
     questions: {
-        color: "white",
         backgroundImage: `url(${process.env.PUBLIC_URL + Image})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         filter: "brightness(70%)",
-        margin: 0,
         height: "718px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     },
 })
