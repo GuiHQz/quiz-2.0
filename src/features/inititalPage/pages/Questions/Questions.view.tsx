@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { useStyles } from "./Questions.style";
-import { ObjectiveQuestions } from "features/inititalPage/components/ObjectiveQuestions";
+import { PageOne } from "features/inititalPage/components/pageOne";
 
 export const QuestionsView: React.FC = () => {
     const styles = useStyles()
@@ -13,7 +13,7 @@ export const QuestionsView: React.FC = () => {
             </Box>
 
             <Box className={styles.questions}> 
-                <ObjectiveQuestions />
+                <PageOne />
             </Box>
         </Box>
     );

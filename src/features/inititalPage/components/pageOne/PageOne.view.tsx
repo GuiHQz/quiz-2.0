@@ -1,8 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material"
-import { useStyles } from "./ObjectiveQuestions.style"
+import { useStyles } from "./PageOne.style"
 
-export const ObjectiveQuestionsView: React.FC = () => {
+export const PageOneView: React.FC = () => {
     const styles = useStyles();
 
     return (

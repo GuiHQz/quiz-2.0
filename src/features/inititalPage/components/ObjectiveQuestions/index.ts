@@ -1,1 +1,0 @@
-export { ObjectiveQuestions } from "./ObjectiveQuestions.controller"
