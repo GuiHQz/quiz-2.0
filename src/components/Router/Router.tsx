@@ -1,12 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Questions } from '../../../src/features/inititalPage/pages/Questions'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-export const Router: React.FC = () => {
-    return(
-        <BrowserRouter>
-            <Routes>
-                <Route />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+const Router: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export { Router };

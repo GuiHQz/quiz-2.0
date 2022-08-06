@@ -3,37 +3,92 @@ import { Box } from "@mui/material";
 import { useStyles } from "./PageOne.style";
 import { DiscursiveQuestions } from "components/DiscursiveQuestions";
 
-export const PageOneView: React.FC = () => {
-    const styles = useStyles()
-
-    return (
-        <Box className={styles.background}>
-
-            <Box className={styles.header}> 
-                Questões - Quiz
-            </Box>
-
-            <Box className={styles.questions}> 
-                <Box>
-                    <Box className={styles.boxesRow}>
-                        <span className={styles.box}>1</span>
-                        <span className={styles.box}>2</span>
-                        <span className={styles.box}>3</span>
-                        <span className={styles.box}>4</span>
-                        <span className={styles.box}>5</span>
-                    </Box>
-                    <Box className={styles.boxesRow}>
-                        <span className={styles.box}>6</span>
-                        <span className={styles.box}>7</span>
-                        <span className={styles.box}>8</span>
-                        <span className={styles.box}>9</span>
-                        <span className={styles.box}>10</span>
-                    </Box>
-                    <Box>
-                        <DiscursiveQuestions />
-                    </Box>
-                </Box>
-            </Box>
-        </Box>
-    );
+interface PageOneProps {
+  firstQuestion: VoidFunction;
+  secondQuestion: VoidFunction;
+  thirdQuestion: VoidFunction;
+  fourthQuestion: VoidFunction;
+  fifthQuestion: VoidFunction;
+  sixthQuestion: VoidFunction;
+  sevethQuestion: VoidFunction;
+  eighthQuestion: VoidFunction;
+  ninthQuestion: VoidFunction;
+  tenthQuestion: VoidFunction;
+  openQuestion: boolean
 }
+
+const PageOneView: React.FC<PageOneProps> = ({
+  firstQuestion,
+  secondQuestion,
+  thirdQuestion,
+  fourthQuestion,
+  fifthQuestion,
+  sixthQuestion,
+  sevethQuestion,
+  eighthQuestion,
+  ninthQuestion,
+  tenthQuestion,
+  openQuestion,
+}) => {
+  const styles = useStyles();
+
+  return (
+    <Box className={styles.background}>
+      <Box className={styles.header}>Questões - Quiz</Box>
+
+      <Box className={styles.questions}>
+        <Box>
+          <Box className={styles.boxesRow}>
+            <span className={styles.box} onClick={firstQuestion}>
+              1
+            </span>
+
+            <span className={styles.box} onClick={secondQuestion}>
+              2
+            </span>
+
+            <span className={styles.box} onClick={thirdQuestion}>
+              3
+            </span>
+
+            <span className={styles.box} onClick={fourthQuestion}>
+              4
+            </span>
+
+            <span className={styles.box} onClick={fifthQuestion}>
+              5
+            </span>
+          </Box>
+          <Box className={styles.boxesRow}>
+            <span className={styles.box} onClick={sixthQuestion}>
+              6
+            </span>
+
+            <span className={styles.box} onClick={sevethQuestion}>
+              7
+            </span>
+
+            <span className={styles.box} onClick={eighthQuestion}>
+              8
+            </span>
+
+            <span className={styles.box} onClick={ninthQuestion}>
+              9
+            </span>
+
+            <span className={styles.box} onClick={tenthQuestion}>
+              10
+            </span>
+          </Box>
+          <Box>
+            <DiscursiveQuestions 
+                openQuestion={openQuestion}
+            />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export { PageOneView };
