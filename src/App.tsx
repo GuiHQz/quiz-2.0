@@ -1,10 +1,8 @@
-import React from 'react';
-import { Box } from '@mui/material';
-import { Questions } from './features/inititalPage/pages/Questions';
+import { PageOne } from './features/inititalPage/pages/PageOne';
 
 function App() {
   return (
-    <Questions />
+    <PageOne />
   );
 }
 
