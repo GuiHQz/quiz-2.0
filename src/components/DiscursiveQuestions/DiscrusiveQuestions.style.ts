@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { color } from "config/colorThemes";
 
 const useStyles = makeStyles({
   content: {
@@ -12,6 +13,16 @@ const useStyles = makeStyles({
     borderBottomLeftRadius: 16,
     bottom: "20px",
     left: "210px",
+  },
+  button: {
+    "& .MuiButton-root": {
+      color: color.black,
+      backgroundColor: color.white,
+      "&:hover": {
+        backgroundColor: color.black,
+        color: color.white
+      }
+    },
   },
 });
 
