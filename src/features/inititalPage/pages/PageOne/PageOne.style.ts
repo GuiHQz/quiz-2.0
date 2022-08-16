@@ -3,23 +3,24 @@ import Image from "assets/images/image.jpg";
 import { color } from "config/colorThemes";
 
 const useStyles = makeStyles({
-  background: {},
+  background: {
+  },
   header: {
-    background: "black",
-    padding: "10px",
-    color: "white",
-    textAlign: "center",
-    fontWeight: 500,
+    // background: "black",
+    // padding: "10px",
+    // color: "white",
+    // textAlign: "center",
+    // fontWeight: 500,
   },
   questions: {
     backgroundImage: `url(${process.env.PUBLIC_URL + Image})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     filter: "brightness(80%)",
-    height: "718px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    height: "100vh"
   },
   boxesRow: {
     position: "relative",
