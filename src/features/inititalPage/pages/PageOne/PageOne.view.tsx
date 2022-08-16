@@ -15,6 +15,7 @@ interface PageOneProps {
   ninthQuestion: VoidFunction;
   tenthQuestion: VoidFunction;
   openQuestion: boolean
+  onClose: (value: boolean) => void
 }
 
 const PageOneView: React.FC<PageOneProps> = ({
@@ -29,12 +30,13 @@ const PageOneView: React.FC<PageOneProps> = ({
   ninthQuestion,
   tenthQuestion,
   openQuestion,
+  onClose,
 }) => {
   const styles = useStyles();
 
   return (
     <Box className={styles.background}>
-      <Box className={styles.header}>Questões - Quiz</Box>
+      {/* <Box className={styles.header}>Questões - Quiz</Box> */}
 
       <Box className={styles.questions}>
         <Box>
@@ -83,6 +85,7 @@ const PageOneView: React.FC<PageOneProps> = ({
           <Box>
             <DiscursiveQuestions 
                 openQuestion={openQuestion}
+                onClose={onClose}
             />
           </Box>
         </Box>

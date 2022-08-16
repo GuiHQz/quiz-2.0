@@ -24,6 +24,12 @@ const useStyles = makeStyles({
       }
     },
   },
+  closeButton: {
+    "&.MuiButton-root": {
+      background: color.white,
+      color: color.black,
+    }
+  },
 });
 
 export { useStyles };

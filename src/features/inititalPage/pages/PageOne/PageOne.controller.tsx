@@ -26,6 +26,10 @@ const PageOne: React.FC = () => {
 
   const tenthQuestion = () => {};
 
+  const onCloseQuestion = () => {
+    setOpenQuestion(false);
+  };
+
   return (
     <PageOneView
       firstQuestion={firstQuestion}
@@ -39,6 +43,7 @@ const PageOne: React.FC = () => {
       ninthQuestion={ninthQuestion}
       tenthQuestion={tenthQuestion}
       openQuestion={openQuestion}
+      onClose={onCloseQuestion}
     />
   );
 };
