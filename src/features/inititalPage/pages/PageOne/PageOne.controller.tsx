@@ -8,23 +8,41 @@ const PageOne: React.FC = () => {
     setOpenQuestion(true);
   };
 
-  const secondQuestion = () => {};
+  const secondQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const thirdQuestion = () => {};
+  const thirdQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const fourthQuestion = () => {};
+  const fourthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const fifthQuestion = () => {};
+  const fifthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const sixthQuestion = () => {};
+  const sixthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const sevethQuestion = () => {};
+  const sevethQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const eighthQuestion = () => {};
+  const eighthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const ninthQuestion = () => {};
+  const ninthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
-  const tenthQuestion = () => {};
+  const tenthQuestion = () => {
+    setOpenQuestion(true);
+  };
 
   const onCloseQuestion = () => {
     setOpenQuestion(false);
