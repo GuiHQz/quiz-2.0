@@ -36,7 +36,7 @@ const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
           <Box className={styles.title}>
             <span>{numberQuestion}. {title}</span>
           </Box>
-          <Box className={styles.title}>
+          <Box className={styles.answer}>
             <span>{answer}</span>
           </Box>
         </Box>
