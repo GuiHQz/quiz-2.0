@@ -6,8 +6,8 @@ interface DiscursiveQuestionsProps {
   openQuestion: boolean;
   onClose: (value: boolean) => void;
   numberQuestion: string;
-  title?: string;
-  answer?: string;
+  title: string;
+  answer: string;
 }
 
 const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
@@ -32,7 +32,7 @@ const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
         <Box className={styles.content}>
             <Button
               onClick={onCloseQuestion}
-              className={styles.closeButton}>Fechar</Button>
+              className={styles.closeButton}>X</Button>
           <Box className={styles.title}>
             <span>{numberQuestion}. {title}</span>
           </Box>

@@ -12,8 +12,10 @@ const useStyles = makeStyles({
     borderTopRightRadius: 16,
     borderBottomRightRadius: 16,
     borderBottomLeftRadius: 16,
-    bottom: "20px",
-    left: "210px",
+    right: 200,
+    left: 200,
+    top: 10,
+    bottom: 10,
   },
   button: {
     "& .MuiButton-root": {
@@ -27,8 +29,13 @@ const useStyles = makeStyles({
   },
   closeButton: {
     "&.MuiButton-root": {
+      //marginTop: "-2px",
       background: color.white,
       color: color.black,
+      "&:hover": {
+        backgroundColor: color.black,
+        color: color.lightBlue
+      }
     }
   },
   title: {
