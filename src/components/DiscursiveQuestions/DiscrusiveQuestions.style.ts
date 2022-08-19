@@ -4,7 +4,8 @@ import { color } from "config/colorThemes";
 const useStyles = makeStyles({
   content: {
     position: "fixed",
-    backgroundColor: "red",
+    background: "linear-gradient(to top, rgb(0, 180, 219), rgb(0, 131, 176))",
+    border:"2px solid darkblue",
     minHeight: 680,
     minWidth: 1180,
     borderTopLeftRadius: 16,
@@ -30,6 +31,12 @@ const useStyles = makeStyles({
       color: color.black,
     }
   },
+  title: {
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    fontWeight: 700,
+  }
 });
 
 export { useStyles };
