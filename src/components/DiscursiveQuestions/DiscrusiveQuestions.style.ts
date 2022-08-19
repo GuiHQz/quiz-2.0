@@ -36,6 +36,14 @@ const useStyles = makeStyles({
     justifyContent: "center",
     textAlign: "center",
     fontWeight: 700,
+    fontSize: 40,
+  },
+  answer: {
+    display: "flex",
+    justifyContent: "center",
+    textAlign: "center",
+    fontWeight: 700,
+    fontSize: 30,
   }
 });
 
