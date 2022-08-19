@@ -1,4 +1,4 @@
-import { PageOne } from './features/inititalPage/pages/PageOne';
+import { PageOne } from './features/questionPages/pages/PageOne';
 
 function App() {
   return (
