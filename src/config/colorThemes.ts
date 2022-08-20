@@ -2,6 +2,7 @@ export const color = {
     //Cores padrões
     white: "#FFFFFF",
     black: "#000000",
+    red: "#FF0000",
     lightBlue: "#93E9FA",
 
     //Cores das equipes
