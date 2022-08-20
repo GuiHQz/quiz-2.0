@@ -1,6 +1,7 @@
 import React from "react";
 import { Drawer, Box, Button } from "@mui/material";
 import { useStyles } from "./DiscrusiveQuestions.style";
+import { ShowAnswerButton } from "components/ShowAnswerButton";
 
 interface DiscursiveQuestionsProps {
   openQuestion: boolean;
@@ -35,6 +36,9 @@ const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
               className={styles.closeButton}>X</Button>
           <Box className={styles.title}>
             <span>{numberQuestion}. {title}</span>
+          </Box>
+          <Box>
+            <ShowAnswerButton>Resposta</ShowAnswerButton>
           </Box>
           <Box className={styles.answer}>
             <span>{answer}</span>
