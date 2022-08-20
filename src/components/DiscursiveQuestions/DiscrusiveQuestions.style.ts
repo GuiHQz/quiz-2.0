@@ -4,7 +4,7 @@ import { color } from "config/colorThemes";
 const useStyles = makeStyles({
   content: {
     position: "fixed",
-    background: "linear-gradient(to top, rgb(0, 180, 219), rgb(0, 131, 176))",
+    background: "linear-gradient(to bottom, #e0eafc, #cfdef3)",
     border:"2px solid darkblue",
     minHeight: 680,
     minWidth: 1180,
