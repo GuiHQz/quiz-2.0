@@ -57,7 +57,19 @@ const useStyles = makeStyles({
     textAlign: "center",
     fontWeight: 700,
     fontSize: 30,
-  }
+  },
+  answerButton: {
+    margin: "100px 0",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  p: {
+    display: "none",
+    "&:target": {
+      display: "block",
+    },
+  },
 });
 
 export { useStyles };

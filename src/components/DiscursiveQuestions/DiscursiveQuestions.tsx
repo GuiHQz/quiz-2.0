@@ -23,6 +23,12 @@ const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
   const onCloseQuestion = () => {
     onClose(false);
   }
+  
+  const showAnswerStyle = () => {
+    const p = document.getElementById("pID") as HTMLStyleElement;
+    const troca = p.style.display;
+    p.style.display = troca === "block" ? "none" : "block";
+  }
 
   return (
     <React.Fragment>
@@ -37,11 +43,11 @@ const DiscursiveQuestions: React.FC<DiscursiveQuestionsProps> = ({
           <Box className={styles.title}>
             <span>{numberQuestion}. {title}</span>
           </Box>
-          <Box>
-            <ShowAnswerButton>Resposta</ShowAnswerButton>
+          <Box className={styles.answerButton}>
+            <ShowAnswerButton onClick={showAnswerStyle}>Resposta</ShowAnswerButton>
           </Box>
           <Box className={styles.answer}>
-            <span>{answer}</span>
+            <span id="pID" className={styles.p}>{answer}</span>
           </Box>
         </Box>
       </Drawer>
