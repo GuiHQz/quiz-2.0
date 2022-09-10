@@ -29,15 +29,17 @@ const useStyles = makeStyles({
   },
   closeButton: {
     "&.MuiButton-root": {
-      height: "100%",
-      position: "absolute",
+      //height: "100%",
+      //position: "absolute",
+      top: 1,
+      left: 1,
       background: color.red,
       color: color.white,
       border: "1px solid black",
       fontWeight: 700,
-      fontSize: "30px",
-      borderRadius: 14,
-      marginLeft: "-70px",
+      fontSize: "15px",
+      borderRadius: 15,
+      //marginLeft: "-70px",
       "&:hover": {
         backgroundColor: "#c20404",
         color: color.white,
