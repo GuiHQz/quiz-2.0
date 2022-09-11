@@ -1,1 +1,0 @@
-export { InitialPage } from './InitialPage.controller'
