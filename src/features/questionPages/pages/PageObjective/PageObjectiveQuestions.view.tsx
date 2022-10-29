@@ -8,24 +8,18 @@ interface PageObjectiveQuestionsViewProps {
   firstQuestion: VoidFunction;
   numberQuestion: string;
   title: string;
+  answer: any;
   openQuestion: boolean;
-  alternativeOne: string;
-  alternativeTwo: string;
-  alternativeThree: string;
-  alternativeFour: string;
   onClose: (value: boolean) => void;
 }
 
 const PageObjectiveQuestionsView: React.FC<PageObjectiveQuestionsViewProps> = ({
   onClick,
   firstQuestion,
-  alternativeTwo,
-  alternativeThree,
-  alternativeFour,
   numberQuestion,
   title,
+  answer,
   openQuestion,
-  alternativeOne,
   onClose,
 }) => {
     const styles = useStyles();
@@ -83,13 +77,10 @@ const PageObjectiveQuestionsView: React.FC<PageObjectiveQuestionsViewProps> = ({
            <ObjectiveQuestions
                 numberQuestion={numberQuestion}
                 title={title}
+                answer={answer}
                 openQuestion={openQuestion}
                 onClose={onClose}
-                alternativeOne={alternativeOne}
                 onClick={onClick}
-                alternativeTwo={alternativeTwo}
-                alternativeThree={alternativeThree}
-                alternativeFour={alternativeFour}
             />
            </Box>
           </Box>

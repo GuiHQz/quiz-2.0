@@ -9,10 +9,7 @@ interface ObjectiveQuestionsProps {
   openQuestion: boolean;
   numberQuestion: string;
   title: string;
-  alternativeOne: string;
-  alternativeTwo: string;
-  alternativeThree: string;
-  alternativeFour: string;
+  answer: string;
 }
 
 const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
@@ -21,10 +18,7 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
   openQuestion,
   numberQuestion,
   title,
-  alternativeOne,
-  alternativeTwo,
-  alternativeThree,
-  alternativeFour,
+  answer,
 }) => {
   const styles = useStyles();
 
@@ -51,12 +45,12 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
           <Box className={styles.answer}>
             {/* Aqui vai ser desenvolvido a lógica das questões objetivas */}
             <Box className={styles.questionsAlternativeGroup}>
-              <button onClick={onClick} className={styles.questionsAlternativeTop}>{alternativeOne}</button>
-              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{alternativeTwo}</button>
+              <button onClick={onClick} className={styles.questionsAlternativeTop}>{answer}</button>
+              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{answer}</button>
             </Box>
             <Box>
-              <button onClick={onClick} className={styles.questionsAlternativeTop}>{alternativeThree}</button>
-              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{alternativeFour}</button>
+              <button onClick={onClick} className={styles.questionsAlternativeTop}>{answer}</button>
+              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{answer}</button>
             </Box>
           </Box>
         </Box>
