@@ -1,6 +1,7 @@
 import React from "react";
 import { Drawer, Box, Button } from "@mui/material";
 import { useStyles } from "./ObjectiveQuestions.style";
+import { NumberQuestionObjective } from "data/NumberQuestionObjective";
 // import { ShowAnswerButton } from "components/ShowAnswerButton";
 
 interface ObjectiveQuestionsProps {
@@ -8,8 +9,8 @@ interface ObjectiveQuestionsProps {
   onClose: (value: boolean) => void;
   openQuestion: boolean;
   numberQuestion: string;
+  numberQuestionObjective: number;
   title: string;
-  answer: string;
 }
 
 const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
@@ -17,10 +18,11 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
   onClose,
   openQuestion,
   numberQuestion,
+  numberQuestionObjective,
   title,
-  answer,
 }) => {
   const styles = useStyles();
+  const questions = NumberQuestionObjective ?? [];
 
   const onCloseQuestion = () => {
     onClose(false);
@@ -44,14 +46,15 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
           </Box>
           <Box className={styles.answer}>
             {/* Aqui vai ser desenvolvido a lógica das questões objetivas */}
-            <Box className={styles.questionsAlternativeGroup}>
-              <button onClick={onClick} className={styles.questionsAlternativeTop}>{answer}</button>
-              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{answer}</button>
-            </Box>
-            <Box>
-              <button onClick={onClick} className={styles.questionsAlternativeTop}>{answer}</button>
-              <button onClick={onClick} className={styles.questionsAlternativeBottom}>{answer}</button>
-            </Box>
+             <Box className={styles.questionsAlternativeGroup}>
+              {
+                questions[numberQuestionObjective].alternatives.map(opcoesResposta => 
+                  <Box className={styles.questionsAlternativeGroup}>
+                      <button onClick={onClick} className={styles.questionsAlternativeTop}>{opcoesResposta.answer}</button>
+                  </Box>
+              )
+              }
+            </Box> 
           </Box>
         </Box>
       </Drawer>

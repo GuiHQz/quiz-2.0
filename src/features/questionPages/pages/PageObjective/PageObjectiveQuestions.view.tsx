@@ -4,21 +4,37 @@ import { useStyles } from "./PageObjectiveQuestions.style";
 import { ObjectiveQuestions } from "components/ObjectiveQuestions";
 
 interface PageObjectiveQuestionsViewProps {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   firstQuestion: VoidFunction;
+  secondQuestion: VoidFunction;
+  thirdQuestion: VoidFunction;
+  fourthQuestion: VoidFunction;
+  fifthQuestion: VoidFunction;
+  sixthQuestion: VoidFunction;
+  sevethQuestion: VoidFunction;
+  eighthQuestion: VoidFunction;
+  ninthQuestion: VoidFunction;
+  tenthQuestion: VoidFunction;
   numberQuestion: string;
+  numberQuestionObjective: number;
   title: string;
-  answer: any;
   openQuestion: boolean;
   onClose: (value: boolean) => void;
 }
 
 const PageObjectiveQuestionsView: React.FC<PageObjectiveQuestionsViewProps> = ({
-  onClick,
   firstQuestion,
+  secondQuestion,
+  thirdQuestion,
+  fourthQuestion,
+  fifthQuestion,
+  sixthQuestion,
+  sevethQuestion,
+  eighthQuestion,
+  ninthQuestion,
+  tenthQuestion,
   numberQuestion,
+  numberQuestionObjective,
   title,
-  answer,
   openQuestion,
   onClose,
 }) => {
@@ -77,10 +93,9 @@ const PageObjectiveQuestionsView: React.FC<PageObjectiveQuestionsViewProps> = ({
            <ObjectiveQuestions
                 numberQuestion={numberQuestion}
                 title={title}
-                answer={answer}
                 openQuestion={openQuestion}
+                numberQuestionObjective={numberQuestionObjective}
                 onClose={onClose}
-                onClick={onClick}
             />
            </Box>
           </Box>

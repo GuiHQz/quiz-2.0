@@ -1,5 +1,5 @@
 import { Alert } from "@mui/material";
-import { ObjectiveQuestions } from "data/ObjectiveQuestions";
+import { ObjectiveQuestionsData } from "data/ObjectiveQuestionsData";
 import React from "react";
 import { PageObjectiveQuestionsView } from "./PageObjectiveQuestions.view";
 
@@ -7,41 +7,115 @@ const PageObjectiveQuestions: React.FC = () => {
     const [openQuestion, setOpenQuestion] = React.useState(false);
     const [numberQuestion, setNumberQuestion] = React.useState(' ');
     const [titleQuestion, setTitleQuestion] = React.useState(' ');
+    const [numberQuestionId, setNumberQuestionId] = React.useState(Number);
 
-    const questions = ObjectiveQuestions ?? [];
+    const questions = ObjectiveQuestionsData ?? [];
 
     const firstQuestion = () => {
         setOpenQuestion(true);
         setNumberQuestion(questions.q1.numberQuestion);
         setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(0);
+    };
+
+    const secondQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(1);
+    };
+
+    const thirdQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(2);
+    };
+
+    const fourthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(3);
+    };
+
+    const fifthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(4);
+    };
+
+    const sixthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(5);
+    };
+
+    const sevethQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(6);
+    };
+
+    const eighthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(7);
+    };
+
+    const ninthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(8);
+    };
+
+    const tenthQuestion = () => {
+        setOpenQuestion(true);
+        setNumberQuestion(questions.q1.numberQuestion);
+        setTitleQuestion(questions.q1.title);
+        setNumberQuestionId(9);
     };
 
     const onCloseQuestion = () => {
         setOpenQuestion(false);
     };
 
-    const checkingQuestion = () => {
-        {questions.q1.alternatives.map((alternatives) => (
-            console.log(alternatives.answer)
-        ))}
-    }
+    // const checkingQuestion = () => {
+    //     {questions.q1.alternatives.map(alternatives => (
+    //         console.log(alternatives.answer)
+            
+    //     ))}
+    // }
 
-    const showAlternatives = () => {
-        {questions.q1.alternatives.map((alternatives) => (
-            <div>{alternatives.answer}</div>
-        ))}
-    }
+    // const showAlternatives = () => {
+    //     {questions.q1.alternatives.map((alternatives) => (
+    //         alternatives.answer
+    //     ))}
+    // }
 
     return(
         <div>
             <PageObjectiveQuestionsView
                 firstQuestion={firstQuestion}
+                secondQuestion={secondQuestion}
+                thirdQuestion={thirdQuestion}
+                fourthQuestion={fourthQuestion}
+                fifthQuestion={fifthQuestion}
+                sixthQuestion={sixthQuestion}
+                sevethQuestion={sevethQuestion}
+                eighthQuestion={eighthQuestion}
+                ninthQuestion={ninthQuestion}
+                tenthQuestion={tenthQuestion}
                 numberQuestion={numberQuestion}
                 title={titleQuestion}
-                answer={showAlternatives}
                 openQuestion={openQuestion}
                 onClose={onCloseQuestion}
-                onClick={checkingQuestion}
+                numberQuestionObjective={numberQuestionId}
             />
         </div>
     );

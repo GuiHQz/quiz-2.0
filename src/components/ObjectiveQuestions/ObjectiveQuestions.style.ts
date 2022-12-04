@@ -61,7 +61,7 @@ export const useStyles = makeStyles({
         fontSize: 30,
       },
       answerButton: {
-        margin: "100px 0",
+        margin: "25px 0",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -73,7 +73,10 @@ export const useStyles = makeStyles({
         },
       },
       questionsAlternativeGroup: {
-        marginRight: "100px",
+        display: "flex",
+        flexWrap: "wrap",
+        margin: "50px 50px",
+        justifyContent: "center",
       },
       questionsAlternativeTop: {
         display: "flex",
@@ -91,22 +94,5 @@ export const useStyles = makeStyles({
           cursor: "pointer",
         },
 
-      },
-      questionsAlternativeBottom: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 50,
-        borderRadius: "10px",
-        height: "125px",
-        width: "400px",
-        padding: "10px",
-        backgroundColor: "#928DAB",
-        border: "none",
-        fontSize: "20px",
-        "&:hover": {
-          backgroundColor: "#797394",
-          cursor: "pointer",
-        },
       },
 });
