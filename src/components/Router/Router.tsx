@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "features/Home";
 import { PageOne } from "features/questionPages/pages/PageOne";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PageObjectiveQuestions } from "features/questionPages/pages/PageObjective";
 
 const Router: React.FC = () => {
   return (
@@ -14,6 +15,11 @@ const Router: React.FC = () => {
         <Route 
           path="/page-one" 
           element={<PageOne />}
+        />
+
+        <Route 
+          path="/page-two"
+          element={<PageObjectiveQuestions />}
         />
       </Routes>
     </BrowserRouter>
