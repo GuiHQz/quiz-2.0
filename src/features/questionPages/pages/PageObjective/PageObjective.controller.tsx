@@ -20,83 +20,70 @@ const PageObjectiveQuestions: React.FC = () => {
 
     const secondQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q2.numberQuestion);
+        setTitleQuestion(questions.q2.title);
         setNumberQuestionId(1);
     };
 
     const thirdQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q3.numberQuestion);
+        setTitleQuestion(questions.q3.title);
         setNumberQuestionId(2);
     };
 
     const fourthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q4.numberQuestion);
+        setTitleQuestion(questions.q4.title);
         setNumberQuestionId(3);
     };
 
     const fifthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q5.numberQuestion);
+        setTitleQuestion(questions.q5.title);
         setNumberQuestionId(4);
     };
 
     const sixthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q6.numberQuestion);
+        setTitleQuestion(questions.q6.title);
         setNumberQuestionId(5);
     };
 
     const sevethQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q7.numberQuestion);
+        setTitleQuestion(questions.q7.title);
         setNumberQuestionId(6);
     };
 
     const eighthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q8.numberQuestion);
+        setTitleQuestion(questions.q8.title);
         setNumberQuestionId(7);
     };
 
     const ninthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q9.numberQuestion);
+        setTitleQuestion(questions.q9.title);
         setNumberQuestionId(8);
     };
 
     const tenthQuestion = () => {
         setOpenQuestion(true);
-        setNumberQuestion(questions.q1.numberQuestion);
-        setTitleQuestion(questions.q1.title);
+        setNumberQuestion(questions.q10.numberQuestion);
+        setTitleQuestion(questions.q10.title);
         setNumberQuestionId(9);
     };
 
     const onCloseQuestion = () => {
         setOpenQuestion(false);
     };
-
-    // const checkingQuestion = () => {
-    //     {questions.q1.alternatives.map(alternatives => (
-    //         console.log(alternatives.answer)
-            
-    //     ))}
-    // }
-
-    // const showAlternatives = () => {
-    //     {questions.q1.alternatives.map((alternatives) => (
-    //         alternatives.answer
-    //     ))}
-    // }
 
     return(
         <div>
