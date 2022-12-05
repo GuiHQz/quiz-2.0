@@ -93,6 +93,21 @@ export const useStyles = makeStyles({
           backgroundColor: "#797394",
           cursor: "pointer",
         },
-
       },
+      validateQuestion: {
+        position: "absolute",
+      },
+      correctAnswer: {
+        backgroundColor: "green",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: "10px",
+        height: "125px",    
+        width: "400px",
+        padding: "10px",
+        border: "none",
+        fontSize: "20px",
+        opacity: "50%",
+      }
 });

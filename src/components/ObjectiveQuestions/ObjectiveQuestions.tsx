@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Drawer, Box, Button } from "@mui/material";
 import { useStyles } from "./ObjectiveQuestions.style";
 import { NumberQuestionObjective } from "data/NumberQuestionObjective";
-// import { ShowAnswerButton } from "components/ShowAnswerButton";
 
 interface ObjectiveQuestionsProps {
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   onClose: (value: boolean) => void;
   openQuestion: boolean;
   numberQuestion: string;
@@ -14,7 +12,6 @@ interface ObjectiveQuestionsProps {
 }
 
 const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
-  onClick,
   onClose,
   openQuestion,
   numberQuestion,
@@ -23,11 +20,24 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
 }) => {
   const styles = useStyles();
   const questions = NumberQuestionObjective ?? [];
+  const [validateQuestion, setValidateQuestion] = useState(1);
 
   const onCloseQuestion = () => {
     onClose(false);
+    setValidateQuestion(1)
   }
-  
+
+  const testeOnClick = (isCorrect: boolean) => {
+    if (isCorrect) {
+      console.log("correta")
+      setValidateQuestion(2)
+    }
+    else if (!isCorrect) {
+      setValidateQuestion(3)
+      console.log("errada")
+    }
+  }
+
   return (
     <React.Fragment>
       <Drawer
@@ -35,26 +45,41 @@ const ObjectiveQuestions: React.FC<ObjectiveQuestionsProps> = ({
         onClose={() => onClose(false)}
       >
         <Box className={styles.content}>
-            <Button
-              onClick={onCloseQuestion}
-              className={styles.closeButton}>X</Button>
+          <Button
+            onClick={onCloseQuestion}
+            className={styles.closeButton}>X</Button>
           <Box className={styles.title}>
             <span>{numberQuestion}. {title}</span>
           </Box>
-          <Box className={styles.answerButton}>
-            {/* Inicialmente, aqui não ser utilizado, caso se confirme, retirar essa box */}
-          </Box>
           <Box className={styles.answer}>
-            {/* Aqui vai ser desenvolvido a lógica das questões objetivas */}
-             <Box className={styles.questionsAlternativeGroup}>
+            <Box className={styles.questionsAlternativeGroup}>
               {
-                questions[numberQuestionObjective].alternatives.map(opcoesResposta => 
+                questions[numberQuestionObjective].alternatives.map(opcoesResposta =>
                   <Box className={styles.questionsAlternativeGroup}>
-                      <button onClick={onClick} className={styles.questionsAlternativeTop}>{opcoesResposta.answer}</button>
+                    <button onClick={() => testeOnClick(opcoesResposta.isCorrect)} className={styles.questionsAlternativeTop}>{opcoesResposta.alternative})  {opcoesResposta.answer}</button>
                   </Box>
-              )
+                )
               }
-            </Box> 
+            </Box>
+            {/*Amanhã criar botão para as respostas nos componentes globais e criar uma prop que vai
+            permitir que possa modificar a cor setando o estado dela, tipo no exemplo do wesley, onde:
+            
+            prop: mudarCor={validateQuestion} e ele vai ditar a cor, se baseando nas linhas 67 até a 81
+            */}
+            <Box className={styles.validateQuestion}>
+              {
+                validateQuestion == 2 &&
+                <Box>
+                  <button className={styles.correctAnswer}></button>
+                </Box>
+              }
+              {
+                validateQuestion == 3 &&
+                <Box>
+                  teste
+                </Box>
+              }
+            </Box>
           </Box>
         </Box>
       </Drawer>
