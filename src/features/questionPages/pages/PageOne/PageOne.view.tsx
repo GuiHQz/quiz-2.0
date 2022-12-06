@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { useStyles } from "./PageOne.style";
 import { DiscursiveQuestions } from "components/DiscursiveQuestions";
+import { Scoreboard } from "components/Scoreboard";
 
 interface PageOneProps {
   firstQuestion: VoidFunction;
@@ -45,6 +46,9 @@ const PageOneView: React.FC<PageOneProps> = ({
       {/* <Box className={styles.header}>Questões - Quiz</Box> */}
 
       <Box className={styles.questions}>
+        <Box className={styles.scoreboard}>
+          <Scoreboard />
+        </Box>
         <Box>
           <Box className={styles.boxesRow}>
             <span className={styles.box} onClick={firstQuestion}>

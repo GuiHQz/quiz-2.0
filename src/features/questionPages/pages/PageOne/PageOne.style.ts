@@ -5,6 +5,11 @@ import { color } from "config/colorThemes";
 const useStyles = makeStyles({
   background: {
   },
+  scoreboard: {
+    position: "absolute",
+    width: "100%",
+    top: 0,
+  },
   header: {
     // background: "black",
     // padding: "10px",
