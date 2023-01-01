@@ -10,6 +10,8 @@ export const useStyles = makeStyles({
         position: "absolute",
     },
     scorePlayerOne: {
+        fontFamily: ["Mouse Memoirs", "sans-serif"].join(","),
+        fontWeight: 400,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -18,6 +20,8 @@ export const useStyles = makeStyles({
         borderLeft: "2.5px solid black"
     },
     scorePlayerTwo: {
+        fontFamily: ["Mouse Memoirs", "sans-serif"].join(","),
+        fontWeight: 400,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -31,6 +35,8 @@ export const useStyles = makeStyles({
         width: "100%",
     },
     playerOne: {
+        fontFamily: ["Mouse Memoirs", "sans-serif"].join(","),
+        fontWeight: 700,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -42,6 +48,8 @@ export const useStyles = makeStyles({
         fontSize: "50px",
     },
     playerTwo: {
+        fontFamily: ["Mouse Memoirs", "sans-serif"].join(","),
+        fontWeight: 700,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -51,5 +59,5 @@ export const useStyles = makeStyles({
         borderLeft: "1.75px solid black",
         borderBottom: "2.5px solid black",
         fontSize: "50px",
-    }
+    },
 })
